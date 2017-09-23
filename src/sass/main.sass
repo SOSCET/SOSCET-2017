@@ -1,0 +1,30 @@
+$x_amplitude: 40px
+$y_amplitude: 20px
+@keyframes xiaomi-shake
+  0%
+    left: 0px
+    top: 0px
+  25%
+    left: -$x_amplitude
+    top: -$y_amplitude
+  50%
+    left: 0px 
+    top: 0px
+  75%
+    left: $x_amplitude
+    top: $y_amplitude
+  100%
+    left: 0px
+    top: 0px
+
+
+header
+  text-align: center
+#xiaomi
+  margin: auto
+  position: relative
+  animation-duration: 0.5s 
+  animation-delay: 0s
+  animation-name: xiaomi-shake
+  animation-iteration-count: infinite
+  animation-timing-function: linear
