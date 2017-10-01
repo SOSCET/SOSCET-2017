@@ -1,0 +1,52 @@
+header
+  text-align: center
+  font-family: monospace
+
+.typewritter
+  display: inline-block
+  h1
+    overflow: hidden
+    border-right: .1em solid orange
+    white-space: nowrap
+    letter-spacing: .02em
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite
+    text-align: center
+    margin: 0 auto
+
+@keyframes typing
+  from
+    width: 0
+  to
+    width: 100%
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+  50%
+    border-color: orange
+
+#xiaomi
+  margin: auto
+  position: relative
+  animation-duration: 0.5s
+  animation-delay: 0s
+  animation-name: xiaomi-shake
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  width: 30%;
+
+$x_amplitude: 40px
+$y_amplitude: 20px
+@keyframes xiaomi-shake
+  0%
+    left: 0px
+    top: 0px
+  25%
+    left: -$x_amplitude
+    top: -$y_amplitude
+  75%
+    left: $x_amplitude
+    top: $y_amplitude
+  100%
+    left: 0px
+    top: 0px
+
