@@ -45,3 +45,26 @@ header
   animation-name: xiaomi-shake
   animation-iteration-count: infinite
   animation-timing-function: linear
+  width: 30%;
+
+.typewritter
+  display: inline-block
+  h1
+    overflow: hidden
+    border-right: .1em solid orange
+    white-space: nowrap
+    letter-spacing: .1em
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite
+    text-align: center
+    margin: 0 auto
+
+@keyframes typing
+  from
+    width: 0
+  to
+    width: 100%
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+  50%
+    border-color: orange
