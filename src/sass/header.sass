@@ -4,11 +4,19 @@ header
   background-image: url('../img/cover.jpg')
   background-size: cover
   background-repeat: no-repeat
+  color: #eee
+  position: relative
+  .title-group
+    position: relative
+    top: 120px
+  .nav
+    position: relative
+    top: 50px
+  height: 525px
 
 .typewritter
   display: inline-block
   h1
-    color: #eee
     overflow: hidden
     border-right: .1em solid orange
     white-space: nowrap
@@ -31,15 +39,15 @@ header
 #xiaomi
   margin: auto
   position: relative
-  animation-duration: 0.5s
+  animation-duration: 0.1s
   animation-delay: 0s
   animation-name: xiaomi-shake
   animation-iteration-count: infinite
   animation-timing-function: linear
-  width: 30%;
+  width: 20em;
 
-$x_amplitude: 40px
-$y_amplitude: 20px
+$x_amplitude: 10px
+$y_amplitude: 0px
 @keyframes xiaomi-shake
   0%
     left: 0px
@@ -53,4 +61,3 @@ $y_amplitude: 20px
   100%
     left: 0px
     top: 0px
-
