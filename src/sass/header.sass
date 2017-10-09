@@ -48,6 +48,18 @@ header
         border-bottom: 0
         margin-top: -10px
         margin-left: -20px
+        @media screen and (max-width: 614px)
+          content: ''
+          position: absolute
+          top: 0
+          left: 50%
+          width: 0
+          height: 0
+          border: 20px solid transparent
+          border-bottom-color: rgba(255, 255, 255, .8)
+          border-top: 0
+          margin-left: -20px
+          margin-top: -20px
       .balloon-content
         height: $balloon-height - 2*$balloon-padding
         width: $balloon-width - 2*$balloon-padding

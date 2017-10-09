@@ -1,5 +1,5 @@
 (() => {
-  const typewriter = (node, str, latency = 5) => {
+  const typewriter = (node, str, latency = 40) => {
     node.innerHTML = "# &nbsp;";
     let pos = 0;
     let currentEvent = node.getAttribute('next_event');
@@ -74,4 +74,29 @@
       e.stopPropagation();
     });
   })();
+
+  /**
+   * Event Crawler for KKTIX
+   */
+  (() => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', 'https://soscet.kktix.cc/events.json');
+    xhr.send(null);
+    xhr.addEventListener('load', () => {
+      const eventsNode = document.querySelector('#events').querySelector('p');
+      const data = JSON.parse(xhr.response);
+
+      console.log(eventsNode);
+      console.log(data);
+
+      let events = [];
+      let t = data.entry;
+      for(let i = 0; i < 10; ++i) {
+        events.push(`<li><a href="${t[i].url}">${t[i].title}</a></li>`);
+      }
+
+      eventsNode.innerHTML = eventsNode.innerHTML + '<ul>' + events.join('<br>') + '</ul>';
+    });
+  })();
+
 })();
